@@ -8,21 +8,12 @@ public class Woman extends Person {
         this.originalLastName = lastName;
     }
     @Override
-    public Gender getGender() {
-        return Gender.WOMAN;
-    }
-    @Override
     public boolean isRetired() {
         if (age < 60) {
             return super.isRetired();
         } else
             return true;
     }
-    @Override
-    public String getInfo() {
-        return String.format("%s has %d years old, is Retired: %s%n", Gender.WOMAN, age, isRetired());
-    }
-
     public void registerPartnership(Person partner) {
         this.partner = partner;
         this.partner.setPartner(this);
@@ -42,7 +33,7 @@ public class Woman extends Person {
         }
         if (shouldChangeBackToOriginalLastName) {
             this.lastName = this.originalLastName;
-            System.out.printf("%s %s deregistered partnership and returned the original lastName%n", this.firstName, this.lastName);
+            System.out.printf("%s %s deregistered partnership and returned to the original lastName%n", this.firstName, this.lastName);
         }
         this.partner.setPartner(null);
         this.partner = null;

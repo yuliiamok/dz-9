@@ -22,9 +22,13 @@ public class Main {
         System.out.println(woman1.getInfo());
         System.out.println(man2.getInfo());
 
+        System.out.println("---------------------------");
+        System.out.println("registerPartnership method:");
         woman1.registerPartnership(man1);
         System.out.println(woman1.toString());
 
+        System.out.println("---------------------------");
+        System.out.println("deregisterPartnership method:");
         woman1.deregisterPartnership(true);
     }
 }

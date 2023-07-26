@@ -1,10 +1,6 @@
 package pack1;
 
-public abstract class Person {
-    public enum Gender {
-    MAN,
-    WOMAN
-}
+public class Person {
     public Person partner;
     protected String firstName;
     protected String lastName;
@@ -27,6 +23,7 @@ public abstract class Person {
         this.age = age;
         this.partner = partner;
     }
-    public abstract Gender getGender();
-    public abstract String getInfo();
+    public String getInfo() {
+        return String.format("%s %s has %d years old, is Retired: %s", firstName, lastName, age, isRetired());
+    }
 }

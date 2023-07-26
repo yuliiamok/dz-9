@@ -4,12 +4,6 @@ public class Man extends Person {
     public Man(String firstName, String lastName, int age, Person partner) {
     super(firstName, lastName, age, partner);
 }
-
-    @Override
-    public Gender getGender() {
-        return Gender.MAN;
-    }
-
     @Override
     public boolean isRetired() {
         if (age < 65) {
@@ -27,9 +21,5 @@ public class Man extends Person {
     }
     public String getLastName(){
         return lastName;
-    }
-    @Override
-    public String getInfo() {
-        return String.format("%s has %d years old, is Retired: %s%n", Gender.MAN, age, isRetired());
     }
 }
